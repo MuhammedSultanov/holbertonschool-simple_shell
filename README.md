@@ -32,6 +32,13 @@ hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
 ```
+## Error Handling
+- If execve() cannot find or execute the specified command, the shell displays an error message, including a brief explanation of the error (using perror()), and then
+  returns to the prompt.
+- If the fork() call fails, the shell exits with an error message.
+- Unless specified otherwise, your program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
+- The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
+
 ### Description of what each file shows:
 |Function|Description|
 |----|-------|
@@ -45,6 +52,17 @@ $
 |print_env.c|prints the environment when user needs|
 |man_1_simple_shell|custom manpage for mini shell|
 
+## Requirements
+
+To compile and run the shell, you need:
+> *C Compiler:* The source code is written in C, so you'll need a C compiler like GCC to compile it.
+
+> *Operating System:* The shell is designed for Unix-like operating systems. It may work on other systems with minor modifications, but it's primarily intended for Unix-based environments. <br>
+
+**That's all you need to get started with compiling and running the shell!**
+
+
+
 ### Environment
 * Language: C
 * OS: Ubuntu 20.04 LTS
@@ -52,6 +70,10 @@ $
 * Style guidelines: [Betty style](https://github.com/alx-tools/Betty/tree/master)
 ## Bugs
 No known bugs exists within the program as of this writing.
+
+## Flowchart
+
+<img align="center" alt="shell" width="400" src="https://scontent.fgyd4-2.fna.fbcdn.net/v/t1.6435-9/102691591_3534645773215442_18299540250031[…]9nP8UW35u1-mFZnqrH23maijK55QyC1CFgMRzTikA&oe=6667B83F">
 
 ## Authors
 * Nahid Isayev | [@Akuro1411](https://github.com/Akuro1411)`
