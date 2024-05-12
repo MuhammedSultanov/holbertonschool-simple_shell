@@ -1,0 +1,64 @@
+.TH hsh 1 "10 May 2024" "1.0" "hsh manual page"
+.SH NAME
+hsh \- simple UNIX command-line interpreter
+.SH SYNOPSIS
+.B hsh
+.SH DESCRIPTION
+hsh is a simple UNIX command-line interpreter designed to execute basic commands entered by the user. This shell project is a trimester final project at Holberton
+ School, aiming to provide an introduction to shell functionality including command execution, process management, and error handling.
+.SH OPTIONS
+None.
+.SH USAGE
+hsh launches the shell interface where users can input commands for execution. Upon execution, simple_shell displays the prompt "NM$" to indicate readiness for command input.
+.SH FUNCTIONALITY
+hsh provides the following functionality:
+.IP "\fB1. Display a prompt\fR"
+hsh displays the prompt "NM$" (it can be change based on your prompt) and waits for the user to type a command. A command line always ends with a new line.
+.IP "\fB2. Command Execution\fR"
+hsh executes the entered command.
+.IP "\fB3. Handle Errors\fR"
+If an executable cannot be found, hsh prints an error message and displays the prompt again. It also handles the "end of file" condition (Ctrl+D).
+.IP "\fB4. Handle Command Lines with Arguments\fR"
+hsh supports command lines with arguments.
+.IP "\fB5. Handle PATH\fR"
+hsh handles the PATH environment variable to locate executables.
+.IP "\fB6. Implement Built-in Commands\fR"
+hsh implements the exit and env built-in commands.
+.IP "\fB7. Exit Built-in Command\fR"
+hsh implements the exit built-in command, which exits the shell.
+.IP "\fB8. Usage of exit Command\fR"
+Usage: exit. No arguments are passed to the built-in exit command.
+.IP "\fB9. Env Built-in Command\fR"
+hsh implements the env built-in command, which prints the current environment.
+.SH EXAMPLES
+.PP
+.B julien@ubuntu:~/shell$ ./hsh
+NM$ ls
+./shell: No such file or directory
+NM$ /bin/ls
+barbie_j       env-main.c  exec.c  fork.c  pid.c  ppid.c    prompt   prompt.c  shell.c  stat.c         wait
+env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat test_scripting.sh  wait.c
+NM$ exit
+NM$ julien@ubuntu:~/shell$
+.PP
+.B julien@ubuntu:~/shell$ echo "/bin/ls" | ./hsh
+barbie_j       env-main.c  exec.c  fork.c  pid.c  ppid.c    prompt   prompt.c  shell.c  stat.c         wait
+env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat test_scripting.sh  wait.c
+.B julien@ubuntu:~/shell$
+.SH EXIT STATUS
+hsh returns the following exit status values:
+.IP 0
+Successful execution.
+.IP 1
+Error during execution.
+.SH FILES
+None.
+.SH SEE ALSO
+bash(1), sh(1), execve(2), fork(2), wait(2), access(2)
+.SH BUGS
+Report bugs to the GitHub repository: https://github.com/MuhammedSultanov/holbertonschool-simple_shell
+Contact for bugs directly: nahidisayev532@gmail.com || mehemmedsultanli@gmail.com
+.SH AUTHORS
+Simple Shell project was developed by Nahid Isayev, Muhammed Sultanov as a trimester final project at Holberton School.
+.SH COPYRIGHT
+This manual page and the holbertonschool-simple_shell project are Open Source for viewers.
