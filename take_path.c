@@ -38,7 +38,7 @@ int path_handler(char *buffer)
 	{
 		if (waitpid(pid, &status, 0) == -1)
 			perror("ERROR");
-			free(buffer);
+		free(buffer);
 		status = WIFEXITED(status) ? WEXITSTATUS(status) : 1;
 	}
 	else if (pid == -1)
