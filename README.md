@@ -72,8 +72,7 @@ To compile and run the shell, you need:
 No known bugs exists within the program as of this writing.
 
 ## Flowchart
-
-<img align="center" alt="shell" width="400" src="https://scontent.fgyd4-2.fna.fbcdn.net/v/t1.6435-9/102691591_3534645773215442_18299540250031[…]9nP8UW35u1-mFZnqrH23maijK55QyC1CFgMRzTikA&oe=6667B83F">
+![Flowchart diagram for shell](https://github.com/MuhammedSultanov/holbertonschool-simple_shell/blob/main/flow.png)
 
 ## Authors
 * Nahid Isayev | [@Akuro1411](https://github.com/Akuro1411)`
