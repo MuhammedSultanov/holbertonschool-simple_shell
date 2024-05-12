@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * handle_env - handle the first argv element was a env
- * @storage: buffer 
+ * @storage: buffer
  *
  * Return: status
  */
